@@ -341,7 +341,7 @@ class Application(Funcs, Relatorios):
         self.listaCl = ttk.Treeview(self.frame_s, height= 3, column=("col1", "col2", "col3", "col4", "col5"))
         self.listaCl.heading('#0', text="")
         self.listaCl.heading('#1', text="Codigo")
-        self.listaCl.heading('#2', text="Nomo do Cliente")
+        self.listaCl.heading('#2', text="Nome do Cliente")
         self.listaCl.heading('#3', text="Telefone")
         self.listaCl.heading('#4', text="Data de Entrada")
         self.listaCl.heading('#5', text="Data de Saida")
