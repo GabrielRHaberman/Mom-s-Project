@@ -243,12 +243,6 @@ class Application(Funcs, Relatorios):
         self.frame_s = Frame(self.janela, bd= 4, bg="#3E3E3F", highlightbackground='#000000', highlightthickness= 0.5)
         self.frame_s.place(relx= 0.02, rely=0.49, relheight= 0.5, relwidth= 0.96)
 
-    # Criando função de hoverButton
-    def mudarHover(button, colorOnHover, colorOnLeave):
-        button.bind("<Enter>", func=lambda e: button.config(background=colorOnHover))
-
-        button.bind("<Leave>", func=lambda e: button.config(background=colorOnLeave))
-
     # Definindo os botões
     def criando_btns(self):
 
@@ -265,7 +259,6 @@ class Application(Funcs, Relatorios):
         self.btn_limpar = Button(self.aba1, text="Limpar", bd=3, bg="#4D9428", fg="black", command= self.Limpar_Tela, font=("verdana", 8, "bold")
                                  , activebackground="#383838", activeforeground="#E2E2E2")
         self.btn_limpar.place(relx= 0.3, rely= 0.1, relwidth= 0.1, relheight= 0.15)
-        self.mudarHover(self.btn_limpar, "#4D9728")
 
         # Botão Buscar
         self.btn_buscar = Button(self.aba1, text="Buscar", bd=3, bg="#4D9428", fg="black", command= self.buscar_cliente, font= ("verdana", 8, "bold"))
@@ -291,7 +284,7 @@ class Application(Funcs, Relatorios):
 
 
         # Calendario data de Saida
-        self.btn_calendario = Button(self.aba1, text= "Data de Entrada", command= self.calendarioS, bg="#4D9428", fg="black", font= ("verdana", 8, "bold"))
+        self.btn_calendario = Button(self.aba1, text= "Data de Saida", command= self.calendarioS, bg="#4D9428", fg="black", font= ("verdana", 8, "bold"))
         self.btn_calendario.place(rely= 0.7, relx= 0.47)
         self.entry_dataS = Entry(self.aba1, width= 12)
         self.entry_dataS.place(relx= 0.64, rely= 0.7)
